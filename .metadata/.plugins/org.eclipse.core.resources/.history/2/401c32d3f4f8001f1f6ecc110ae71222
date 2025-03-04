@@ -1,0 +1,18 @@
+
+public class Main {
+    public static void main(String[] args) {
+        // Lấy instance của Singleton
+        StaticBlockSingleton singleton1 = StaticBlockSingleton.getInstance();
+        StaticBlockSingleton singleton2 = StaticBlockSingleton.getInstance();
+
+        // Hiển thị thông tin để kiểm tra
+        singleton1.showMessage();
+        singleton2.showMessage();
+
+        if (singleton1 == singleton2) {
+            System.out.println("Both instances are the same (Singleton works!)");
+        } else {
+            System.out.println("Instances are different (Singleton failed!)");
+        }
+    }
+}
